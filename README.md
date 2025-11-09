@@ -23,3 +23,24 @@ Live Server: http://localhost:8080/
     - < git checkout main >
 - Recall that the source branch for GitHub Pages is set in your repository’s settings. Get this changed to the gh-pages branch. That should be everything!
 
+Checklist when initiating new project:
+- Update Files
+	• Edit package.json → change:
+	    • name → todo-list
+	    • description, author, etc.
+	• Check Webpack entry in webpack.common.js or webpack.config.js
+- Structure Code
+	•	Keep src/index.js as entry
+	•	Create new folders in src 
+	•	Import modules in index.js
+- Clean & Verify
+	•	Run npm install
+	•	Run npm start → confirm dev server works
+	•	Commit base setup → git add . && git commit -m "Setup ToDo List base from template"
+- Optional
+	•	Update ESLint/Prettier configs (if included)
+
+Scripts:
+- npm start → develop and test locally
+- npm run build → bundle for production (creates fresh /dist)
+- npm run deploy → push the new /dist to GitHub Pages

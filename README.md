@@ -1,5 +1,6 @@
-# Basic Template
-A general template repository according to the Revisiting Webpack section of The Odin Project. 
+# Mission Complete
+A ToDo app for users to create and store tasks! 
+It follows the project guidlines set by The Odin Project.
 
 ## Skills 
 **HTML and CSS**

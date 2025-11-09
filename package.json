@@ -1,7 +1,7 @@
 {
-  "name": "template-repository",
+  "name": "todo-app",
   "version": "1.0.0",
-  "description": "A general template repository according to the Revisiting Webpack section of The Odin Project.",
+  "description": "A ToDo app for users to create and store tasks! It follows the project guidlines set by The Odin Project.",
   "main": "index.js",
   
   "scripts": {
@@ -17,7 +17,7 @@
   },
 
   "keywords": [],
-  "author": "",
+  "author": "Kaito Watanabe",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kaito24mako/Template-Repository/issues"

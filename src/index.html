@@ -6,6 +6,67 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <nav id="sidebar">
+        <button id="toggle-btn"><img src="./images/sidebar.png" alt="A button image for toggling sidebar" width="40px"></button>
+        
+        <div id="task-container">
+            <h3>Tasks</h3>
+            <ul class="tab-container">
+                <li>
+                    <button id="all">
+                        <img src="./images/inbox.png" alt="An image of an inbox" width="30px">
+                        All
+                        <p class="counter">6</p>
+                    </button>
+                </li>
+                <li>
+                    <button id="today">
+                        <img src="./images/today.png" alt="An image of the Sun" width="30px">
+                        Today
+                        <p class="counter">2</p>
+                    </button>
+                </li>
+                <li>
+                    <button id="week">
+                        <img src="./images/week.png" alt="An image of a calendar" width="30px">
+                        This Week
+                        <p class="counter">1</p>
+                    </button>
+                </li>
+                <li>
+                    <button id="unscheduled">
+                        <img src="./images/unscheduled.png" alt="An image of an incomplete calendar" width="30px">
+                        Unscheduled
+                        <p class="counter">3</p>
+                    </button>
+                </li>
+                <li>
+                    <button id="Completed">
+                        <img src="./images/complete.png" alt="An image of a tick" width="30px">
+                        Completed
+                        <p class="counter">0</p>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <div id="mission-container">
+            <h3>My Missions</h3>
+            <ul class="tab-container" id="mission-tab-container">
+                <li>
+                    <button id="default">
+                        <img src="./images/mission.png" alt="An image of a folder with a target" width="30px">
+                        To Buy
+                        <p class="counter">3</p>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <button id="addMission-btn">
+            <p>+</p>
+            <p>Add Mission</p>
+        </button>
+    </nav>
 </body>
 </html>

@@ -1,48 +1,65 @@
-:root {
-    /* fonts */
-    --font-heading: system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
-    --font-primary: system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+#sidebar-container {
+    display: flex;
+    flex-direction: column;
+    
+    width: fit-content;
+    height: 100dvh;
 
-    /* colors */
-    --color-black: hsl(0, 0%, 10%);
+    padding: var(--spacing-vlarge);
 
-    --color-grey: hsl(0, 0%, 40%);
-    --color-grey-light: hsl(0, 0%, 50%);
-
-    --color-white: hsl(0, 0%, 95%);
-    --color-white-light: hsl(0, 0%, 85%);
-    --color-white-dark: hsl(0, 0%, 75%);
-
-    /* gradients */
-    --gradient-blue: linear-gradient(135deg, #75E2EF, #1D768C);
-
-    /* font sizes */
-    --size-heading: clamp(2.5rem, 4vw + 1rem, 4rem);
-    --size-xlarge: clamp(2rem, 3vw + 1rem, 3rem);
-    --size-vlarge: clamp(1.5rem, 2vw + 1rem, 2rem);
-    --size-large: clamp(1.25rem, 1.2vw + 0.5rem, 1.5rem);
-    --size-medium: clamp(1rem, 1vw + 0.5rem, 1.2rem);
-    --size-small: clamp(0.875rem, 0.8vw + 0.5rem, 1rem);
-    --size-vsmall: clamp(0.75rem, 0.7vw + 0.5rem, 0.875rem);
-
-    /* spacing */
-    --spacing-xlarge: 10rem;
-    --spacing-vlarge: 3rem;
-    --spacing-large: 2rem;
-    --spacing-vmedium: 1.5rem;
-    --spacing-medium: 1rem;
-    --spacing-small: 0.6rem;
-    --spacing-vsmall: 0.3rem;
-
-    /* container widths */
-    --width-tab: clamp(50%, 45vw, 60%);
-
-    /* shadows */
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
+    background-color: var(--black);
 }
 
-#sidebar-container {
-    background-color: var(--color-black);
+#sidebarToggle-btn {
+    /* to align with the rest of icons */
+    margin: 8px 0 0 8px;
+}
+
+#task-container,
+#mission-container {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 2.5rem;
+    gap: var(--spacing-small);
+}
+
+#task-container > h3,
+#mission-container > h3 {
+    font-size: var(--medium);
+    font-weight: bold;
+    color: var(--white-dark);
+}
+
+.tab-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--spacing-small);
+}
+
+.tab-container button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: var(--width-tab);
+
+    padding: var(--spacing-vsmall) var(--spacing-small);
+
+    font-size: var(--medium);
+    color: var(--white-light);
+
+    border: none;
+}
+
+.tab-container span {
+    display: flex;
+    align-items: center;
+    
+    gap: var(--spacing-large);
+}
+
+.tab-container .counter {
+    color: var(--white-dark);
 }

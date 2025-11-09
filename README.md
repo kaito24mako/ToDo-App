@@ -1,4 +1,4 @@
-# ☑️ MissionComplete - ToDo App 
+# ☑️ ToDo App 
 A ToDo app for users to create and store tasks! 
 It follows the project guidlines set by The Odin Project.
 

@@ -10,7 +10,7 @@
     background-color: var(--black);
 }
 
-#sidebarToggle-btn {
+#sidebarToggle {
     /* to align with the rest of icons */
     margin: 8px 0 0 8px;
 }
@@ -50,10 +50,14 @@
     font-size: var(--medium);
     color: var(--white-light);
 
-    border: none;
+    border-radius: 10px;
 }
 
-.tab-container span {
+.tab-container button:hover {
+    background-color: var(--black-light);
+}
+
+.tab-container .icon-and-title {
     display: flex;
     align-items: center;
     
@@ -63,3 +67,4 @@
 .tab-container .counter {
     color: var(--white-dark);
 }
+

@@ -44,6 +44,7 @@ button {
 
     /* colors */
     --black: hsl(0, 0%, 10%);
+    --black-light: hsl(0, 0%, 13%);
 
     --grey: hsl(0, 0%, 20%);
     --grey-light: hsl(0, 0%, 30%);

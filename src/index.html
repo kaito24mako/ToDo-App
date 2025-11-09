@@ -7,14 +7,16 @@
 </head>
 <body>
     <nav id="sidebar-container">
-        <button id="sidebarToggle-btn"><img src="./images/sidebar.png" alt="A button image for toggling sidebar" width="25px"></button>
+        <button id="sidebarToggle">
+            <img src="./images/sidebar.png" alt="A button image for toggling sidebar" width="25px">
+        </button>
         
         <div id="task-container">
             <h3>Tasks</h3>
             <ul class="tab-container">
                 <li>
                     <button id="all">
-                        <span>
+                        <span class="icon-and-title">
                             <img src="./images/inbox.png" alt="An image of an inbox" width="25px">
                             All
                         </span>
@@ -23,7 +25,7 @@
                 </li>
                 <li>
                     <button id="today">
-                        <span>
+                        <span class="icon-and-title">
                             <img src="./images/today.png" alt="An image of the Sun" width="25px">
                             Today
                         </span>
@@ -32,7 +34,7 @@
                 </li>
                 <li>
                     <button id="week">
-                        <span>
+                        <span class="icon-and-title">
                             <img src="./images/week.png" alt="An image of a calendar" width="25px">
                             This Week
                         </span>
@@ -41,7 +43,7 @@
                 </li>
                 <li>
                     <button id="unscheduled">
-                        <span>
+                        <span class="icon-and-title">
                             <img src="./images/unscheduled.png" alt="An image of an incomplete calendar" width="25px">
                             Unscheduled
                         </span>
@@ -49,8 +51,8 @@
                     </button>
                 </li>
                 <li>
-                    <button id="Completed">
-                        <span>
+                    <button id="completed">
+                        <span class="icon-and-title">
                             <img src="./images/complete.png" alt="An image of a tick" width="25px">
                             Completed
                         </span>
@@ -65,7 +67,7 @@
             <ul class="tab-container" id="mission-tab-container">
                 <li>
                     <button id="default">
-                        <span>
+                        <span class="icon-and-title">
                             <img src="./images/mission.png" alt="An image of a folder with a target" width="25px">
                             To buy
                         </span>
@@ -74,7 +76,7 @@
                 </li>
                 <li>
                     <button id="addMission">
-                        <span>
+                        <span class="icon-and-title">
                             <img src="./images/plus.png" alt="An image of a plus sign" width="30px">
                             Add Mission
                         </span>

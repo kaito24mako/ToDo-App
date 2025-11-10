@@ -43,17 +43,15 @@ button {
     --font-primary: system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
 
     /* colors */
-    --black: hsl(0, 0%, 10%);
-    --black-light: hsl(0, 0%, 15%);
+    --black: hsl(0, 0%, 9%);
+    --black-light: hsl(0, 0%, 12%);
 
-    --grey: hsl(0, 0%, 20%);
-    --grey-light: hsl(0, 0%, 30%);
+    --grey: hsl(0, 0%, 17%);
 
     --white-dark: hsl(0, 0%, 60%);
     --white: hsl(0, 0%, 80%);
 
-    /* gradients */
-    --gradient-blue: linear-gradient(135deg, #75E2EF, #1D768C);
+    --blue-gradient: linear-gradient(135deg, #75E2EF, #1D768C);
 
     /* font sizes */
     --vlarge: 1.5rem;
@@ -81,6 +79,5 @@ button {
 
 body {
     display: flex;
-
     background-color: var(--black-light);
 }

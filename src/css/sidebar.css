@@ -87,7 +87,7 @@
 }
 
 .tab-container button:hover {
-    background-color: var(--black-light);
+    background-color: var(--grey);
 }
 
 .tab-container .icon-and-title {

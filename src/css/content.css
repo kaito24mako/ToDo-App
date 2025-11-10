@@ -10,14 +10,14 @@
     gap: var(--spacing-large);
 }
 
-#content-container #tabTitle {
+#tabTitle {
     color: var(--white-dark);
     font-size: var(--vlarge);
 }
 
-#content-container #counters {
+#counters {
     display: flex;
-    gap: var(--spacing-vlarge);
+    gap: var(--spacing-medium);
 }
 
 #content-container .counter {
@@ -28,15 +28,16 @@
     padding: var(--spacing-medium) var(--spacing-vlarge);
 
     color: var(--white);
-    border-radius: 15px;
+
     background-color: var(--grey);
+    border-radius: 10px;
 }
 
-#content-container .counter > #number {
+.counter > #number {
     font-size: var(--vlarge);
 }
 
-#content-container .counter > #status {
+.counter > #status {
     font-size: var(--medium);
 }
 
@@ -61,7 +62,7 @@
     font-size: 0.9rem;
 
     background-color: var(--grey);
-    border-radius: 10px;
+    border-radius: 13px;
 }
 
 .task > #button-and-title {
@@ -86,6 +87,9 @@
     border-radius: 10px;
 }
 
+#addTaskBtn:hover {
+    background-color: var(--black);
+}
 
 
 

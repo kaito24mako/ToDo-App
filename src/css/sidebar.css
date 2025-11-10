@@ -19,12 +19,28 @@
     display: none;
 }
 
-#sidebarToggle {
+#sidebarBtn-and-logo {
+    display: flex;
+
     /* to position inside the sidebar */
     position: absolute;
     top: var(--spacing-vlarge);
     left: var(--spacing-vlarge);
     z-index: 1;
+
+    gap: var(--spacing-small);
+}
+
+#logo {
+    display: flex;
+
+    position: fixed;
+    left: 19.5rem;
+
+    gap: var(--spacing-small);
+
+    color: var(--white-dark);
+    font-size: var(--large);
 }
 
 #task-container,

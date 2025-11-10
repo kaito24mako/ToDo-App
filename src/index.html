@@ -8,7 +8,7 @@
 <body>
     <span>
         <button id="sidebarToggle">
-            <img src="./images/sidebar.png" alt="A button image for toggling sidebar" width="25px">
+            <img src="./images/sidebar.png" alt="A button image for toggling sidebar">
         </button>
     </span>
 
@@ -19,7 +19,7 @@
                 <li>
                     <button id="all">
                         <span class="icon-and-title">
-                            <img src="./images/inbox.png" alt="An image of an inbox" width="25px">
+                            <img src="./images/inbox.png" alt="An image of an inbox">
                             All
                         </span>
                         <p class="counter">6</p>
@@ -28,7 +28,7 @@
                 <li>
                     <button id="today">
                         <span class="icon-and-title">
-                            <img src="./images/today.png" alt="An image of the Sun" width="25px">
+                            <img src="./images/today.png" alt="An image of the Sun">
                             Today
                         </span>
                         <p class="counter">2</p>
@@ -37,7 +37,7 @@
                 <li>
                     <button id="week">
                         <span class="icon-and-title">
-                            <img src="./images/week.png" alt="An image of a calendar" width="25px">
+                            <img src="./images/week.png" alt="An image of a calendar">
                             This Week
                         </span>
                         <p class="counter">1</p>
@@ -46,16 +46,25 @@
                 <li>
                     <button id="unscheduled">
                         <span class="icon-and-title">
-                            <img src="./images/unscheduled.png" alt="An image of an incomplete calendar" width="25px">
+                            <img src="./images/unscheduled.png" alt="An image of an incomplete calendar">
                             Unscheduled
                         </span>
                         <p class="counter">3</p>
                     </button>
                 </li>
                 <li>
+                    <button id="important">
+                        <span class="icon-and-title">
+                            <img src="./images/important.png" alt="Two exclamation marks">
+                            Important
+                        </span>
+                        <p class="counter">1</p>
+                    </button>
+                </li>
+                <li>
                     <button id="completed">
                         <span class="icon-and-title">
-                            <img src="./images/complete.png" alt="An image of a tick" width="25px">
+                            <img src="./images/complete.png" alt="An image of a tick">
                             Completed
                         </span>
                         <p class="counter">0</p>
@@ -70,7 +79,7 @@
                 <li>
                     <button id="default">
                         <span class="icon-and-title">
-                            <img src="./images/mission.png" alt="An image of a folder with a target" width="25px">
+                            <img src="./images/mission.png" alt="An image of a folder with a target">
                             To buy
                         </span>
                         <p class="counter">3</p>
@@ -79,7 +88,7 @@
                 <li>
                     <button id="addMission">
                         <span class="icon-and-title">
-                            <img src="./images/plus.png" alt="An image of a plus sign" width="25px">
+                            <img src="./images/plus.png" alt="An image of a plus sign">
                             Add Mission
                         </span>
                     </button>
@@ -90,9 +99,42 @@
 
     <main id="content-container">
         <h1 id="logo-and-title">
-            <img src="./images/logo.png" alt="The logo" width="25px">
+            <img src="./images/logo.png" alt="The logo">
             MissionComplete
         </h1>
+        <div id="content-wrapper">
+            <h2 id="tabTitle">Today</h2>
+
+            <div id="counters">
+                <span id="progress">
+                    <p id="number">3</p>
+                    <p>In Progress</p>
+                </span>
+                <span id="completed">
+                    <p id="number">3</p>
+                    <p>In Progress</p>
+                </span>
+            </div>
+
+            <div id="tasks">
+                <div class="task">
+                    <img src="./images/important.png" alt="Two exclamation marks">
+                    <span id="button-and-title">
+                        <button>
+                            <img src="./images/circle.png" alt="A circle">
+                            <p id="taskTitle">Task 1</p>
+                        </button>
+                    </span>
+                    <span id="date">12/Nov/2025</span>
+                </div>
+            </div>
+            <!-- Repeat with DOM -->
+             
+            <button id="addTask">
+                <img src="./images/plus.png" alt="An image of a plus sign">
+                Add Task
+            </button>
+        </div>
     </main>
 </body>
 </html>

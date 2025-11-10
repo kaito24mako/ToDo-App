@@ -83,5 +83,5 @@ button {
 body {
     display: flex;
 
-    background-color: var(--grey);
+    background-color: var(--black-light);
 }

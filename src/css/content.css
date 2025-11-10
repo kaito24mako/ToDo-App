@@ -1,7 +1,7 @@
 #content-container > #logo-and-title {
     display: flex;
 
-    position: relative;
+    position: fixed;
     top: 2rem;
     left: 1rem;
 
@@ -10,6 +10,19 @@
     color: var(--white-dark);
     font-size: var(--large);
 }
+
+#content-container {
+    /* width: calc(100vw - calc(var(--width-sidebar) + 48px)); */
+
+    /* margin: 0 auto; */
+}
+
+#content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 
 

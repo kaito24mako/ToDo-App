@@ -70,7 +70,7 @@ button {
     --spacing-vsmall: 0.3rem;
 
     /* container widths */
-    --width-tab: 250px;
+    --width-sidebar: 250px;
 
     /* shadows */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);

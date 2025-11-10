@@ -44,14 +44,13 @@ button {
 
     /* colors */
     --black: hsl(0, 0%, 10%);
-    --black-light: hsl(0, 0%, 13%);
+    --black-light: hsl(0, 0%, 15%);
 
     --grey: hsl(0, 0%, 20%);
     --grey-light: hsl(0, 0%, 30%);
 
-    --white-dark: hsl(0, 0%, 70%);
+    --white-dark: hsl(0, 0%, 60%);
     --white: hsl(0, 0%, 80%);
-    --white-light: hsl(0, 0%, 90%);
 
     /* gradients */
     --gradient-blue: linear-gradient(135deg, #75E2EF, #1D768C);
@@ -70,7 +69,7 @@ button {
     --spacing-vsmall: 0.3rem;
 
     /* container widths */
-    --width-sidebar: 250px;
+    --width-sidebar: 220px;
 
     /* shadows */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);

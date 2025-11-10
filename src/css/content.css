@@ -1,12 +1,96 @@
 #content-container {
-    margin: 0 auto;
-}
-
-#content-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    width: 100vw;
+
+    margin: 0 auto;
+    padding: 5.625rem 0.5rem;
+    gap: var(--spacing-large);
 }
+
+#content-container #tabTitle {
+    color: var(--white-dark);
+    font-size: var(--vlarge);
+}
+
+#content-container #counters {
+    display: flex;
+    gap: var(--spacing-vlarge);
+}
+
+#content-container .counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: var(--spacing-medium) var(--spacing-vlarge);
+
+    color: var(--white);
+    border-radius: 15px;
+    background-color: var(--grey);
+}
+
+#content-container .counter > #number {
+    font-size: var(--vlarge);
+}
+
+#content-container .counter > #status {
+    font-size: var(--medium);
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--spacing-medium);
+}
+
+#tasks > .task {
+    display: flex;
+    align-items: center;
+
+    
+    width: fit-content;
+
+    gap: clamp(10rem, 20vw, 30rem);
+    padding: var(--spacing-small) var(--spacing-medium);
+
+    color: var(--white);
+    font-size: 0.9rem;
+
+    background-color: var(--grey);
+    border-radius: 10px;
+}
+
+.task > #button-and-title {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    
+    gap: var(--spacing-small);
+}
+
+#addTaskBtn {
+    display: flex;
+    align-items: center;
+
+    gap: var(--spacing-small);
+    padding: var(--spacing-small) var(--spacing-vlarge);
+    
+    color: var(--white);
+    font-size: var(--medium);
+
+    border: 1px solid var(--grey);
+    border-radius: 10px;
+}
+
+
+
+
+
+
 
 
 

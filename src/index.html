@@ -6,7 +6,7 @@
     <title>MissonComplete</title>
 </head>
 <body>
-    <span id="sidebarBtn-and-logo">
+    <header id="sidebarBtn-and-logo">
         <button id="sidebarBtn">
             <img src="./images/sidebar.png" alt="A button image for toggling sidebar">
         </button>
@@ -14,7 +14,7 @@
             <img src="./images/logo.png" alt="The logo">
             MissionComplete
         </h1>
-    </span>
+    </header>
 
     <nav id="sidebar-container">
         <div id="task-container">
@@ -101,42 +101,38 @@
         </div>
     </nav>
 
-    <main id="content-container">
-        
-        <div id="content-wrapper">
-            
-            <h2 id="tabTitle">Today</h2>
+    <main id="content-container">         
+        <h2 id="tabTitle">Today</h2>
 
-            <div id="counters">
-                <span id="progress">
-                    <p id="number">3</p>
-                    <p>In Progress</p>
-                </span>
-                <span id="completed">
-                    <p id="number">3</p>
-                    <p>In Progress</p>
-                </span>
-            </div>
-
-            <div id="tasks">
-                <div class="task">
-                    <img src="./images/important.png" alt="Two exclamation marks">
-                    <span id="button-and-title">
-                        <button>
-                            <img src="./images/circle.png" alt="A circle">
-                            <p id="taskTitle">Task 1</p>
-                        </button>
-                    </span>
-                    <span id="date">12/Nov/2025</span>
-                </div>
-            </div>
-            <!-- Repeat with DOM -->
-             
-            <button id="addTaskBtn">
-                <img src="./images/plus.png" alt="An image of a plus sign">
-                Add Task
-            </button>
+        <div id="counters">
+            <span id="progress" class="counter">
+                <p id="number">3</p>
+                <p id="status">In Progress</p>
+            </span>
+            <span id="completed" class="counter">
+                <p id="number">0</p>
+                <p id="status">Completed</p>
+            </span>
         </div>
+
+        <div id="tasks">
+            <div class="task">
+                <span id="button-and-title">
+                    <button>
+                        <img src="./images/circle.png" alt="A circle">
+                    </button>
+                    <p id="taskTitle">Task 1</p>
+                    <img src="./images/important.png" alt="Two exclamation marks">
+                </span>
+                <span id="date">Sat, 12 Nov</span>
+            </div>
+        </div>
+        <!-- Repeat with DOM -->
+            
+        <button id="addTaskBtn">
+            <p>+</p>
+            <p>Add Task</p>
+        </button>
     </main>
 </body>
 </html>

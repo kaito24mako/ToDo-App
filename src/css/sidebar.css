@@ -8,20 +8,40 @@
     padding: var(--spacing-vlarge);
 
     background-color: var(--black);
+
+    transition: opacity 0.1s ease-in-out;
+}
+
+#sidebar-container.open {
+    opacity: 1;
+}
+
+#sidebar-container.close {
+    opacity: 0;
 }
 
 #sidebarToggle {
-    /* to align with the rest of icons */
-    margin: 8px 0 0 8px;
+    /* to position inside the sidebar */
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 1;
 }
 
 #task-container,
 #mission-container {
     display: flex;
     flex-direction: column;
-
-    margin-top: 2.5rem;
     gap: var(--spacing-small);
+}
+
+#task-container {
+    /* double the margin due to absolute positioning of sidebar button */
+    margin-top: 5rem;
+}
+
+#mission-container {
+    margin-top: 2.5rem;
 }
 
 #task-container > h3,
@@ -67,4 +87,5 @@
 .tab-container .counter {
     color: var(--white-dark);
 }
+
 

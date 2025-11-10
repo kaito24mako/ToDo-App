@@ -5,7 +5,7 @@
     width: fit-content;
     height: 100dvh;
 
-    padding: var(--spacing-vlarge);
+    padding: var(--spacing-large);
 
     background-color: var(--black);
 
@@ -13,18 +13,18 @@
 }
 
 #sidebar-container.open {
-    opacity: 1;
+    display: flex;
 }
 
 #sidebar-container.close {
-    opacity: 0;
+    display: none;
 }
 
 #sidebarToggle {
     /* to position inside the sidebar */
     position: absolute;
-    top: 2rem;
-    left: 2rem;
+    top: var(--spacing-vlarge);
+    left: var(--spacing-vlarge);
     z-index: 1;
 }
 
@@ -81,11 +81,17 @@
     display: flex;
     align-items: center;
     
-    gap: var(--spacing-large);
+    gap: var(--spacing-medium);
 }
 
 .tab-container .counter {
     color: var(--white-dark);
+}
+
+
+#button-and-logo {
+    display: flex;
+    
 }
 
 

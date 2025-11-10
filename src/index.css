@@ -63,8 +63,8 @@ button {
     --small: 0.5rem;
 
     /* spacing */
-    --spacing-vlarge: 1.5rem;
-    --spacing-large: 1.25rem;
+    --spacing-vlarge: 2rem;
+    --spacing-large: 1.5rem;
     --spacing-medium: 1rem;
     --spacing-small: 0.5rem;
     --spacing-vsmall: 0.3rem;
@@ -81,5 +81,7 @@ button {
 /* ==== General ==== */
 
 body {
+    display: flex;
+
     background-color: var(--grey);
 }

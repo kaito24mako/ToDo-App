@@ -1,0 +1,16 @@
+#content-container {
+    /* padding: var(--spacing-vlarge); */
+}
+
+#content-container > #logo-and-title {
+    display: flex;
+
+    position: relative;
+    top: 2rem;
+    left: 1rem;
+
+    gap: var(--spacing-small);
+
+    color: var(--white-dark);
+}
+

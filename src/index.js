@@ -3,7 +3,8 @@ import './css/sidebar.css';
 import './css/content.css';
 
 import { toggleSidebar, toggleTheme, checkViewportWidth } from './js/sidebar.js';
-import { displayTabContent } from './js/content.js';
+import { displayTabContent } from './js/dom.js';
+import { tabArray, createDefaultTabs } from './js/tabs.js';
 
 export function getUI() {
     return {
@@ -14,7 +15,7 @@ export function getUI() {
         sidebarBtn: document.querySelector('#sidebarBtn'),
         logo: document.querySelector('#logo'),
         themeBtn: document.querySelector('#themeBtn'),
-        
+        allBtn: document.querySelector('#allBtn'),
         /* content */
         content: document.querySelector('#content-container'),
     }
@@ -24,5 +25,16 @@ export function getUI() {
 toggleSidebar();
 toggleTheme();
 checkViewportWidth();
+/* dom.js */
+/* tabs.js */
+createDefaultTabs();
 
-/* content.js */
+
+/* Display tab content on click */ 
+
+allBtn.addEventListener('click', () => {
+    const allTab = tabArray.find(tab => tab.title === 'All');
+    if (allTab) {
+        displayTabContent(allTab);
+    }
+})

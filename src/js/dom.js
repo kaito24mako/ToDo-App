@@ -4,7 +4,7 @@ export function displayTabContent(tab) {
     const { content } = getUI();
     content.innerHTML = "";
 
-    // List of tabs 
+    // list of tabs 
     const tabTitle = document.createElement('h2');
     tabTitle.id = 'tabTitle';
     tabTitle.textContent = tab.title;  // PLACEHOLDER
@@ -36,66 +36,46 @@ export function displayTabContent(tab) {
     completedStatus.id = 'status';
     completedStatus.textContent = 'Completed';  
 
-    // Structure 
     content.append(tabTitle, counters);
     counters.append(progress, completed);
     progress.append(progressNumber, progressStatus);
     completed.append(completedNumber, completedStatus);
 
-    // List of tasks 
+    // list of tasks 
+    const taskContainer = document.createElement('div');
+    taskContainer.id = 'tasks';
+    tab.taskArray.forEach(t => {
+        const task = document.createElement('div');
+        task.classList.add('task');
+
+        const buttonAndTitle = document.createElement('span');
+        buttonAndTitle.id = 'button-and-title';
+
+        const circle = document.createElement('button');
+        const circleImg = document.createElement('img');
+        circleImg.src = '../images/circle.png';
+        circleImg.alt = 'A small circle';
+
+        const title = document.createElement('p');
+        title.id = 'taskTitle';
+        title.textContent = 'Task 1'; // PLACEHOLDER 
+
+        const important = document.createElement('img');
+        important.src = '../images/important.png';
+        important.alt = 'Two exclamation marks';
+
+        const duedate = document.createElement('span');
+        duedate.id = 'duedate';
+        duedate.textContent = 'Sat, 12 Nov'; // PLACEHOLDER
+
+        taskContainer.appendChild(task);
+        task.append(buttonAndTitle, duedate);
+        buttonAndTitle.append(circle, title, important);
+    })
+
+    content.appendChild(taskContainer);
 }
 
-
-let tabArray = [];
-
-class Tab {
-    constructor(title) {
-        this.title = title;
-        this.progress = 0;
-        this.completed = 0;
-        this.taskArr = [];
-        this.id = crypto.randomUUID();
-    }
-    addTask(task) {
-        this.taskArr.push(task);
-        this.updateCounts();
-    }
-    updateCounts() {
-        this.completed = this.taskArr.filter(task => task.completed).length;
-        this.progress = this.taskArr.length - this.completed;
-    }
-}
-
-function createTab(title) {
-    let newTab = new Tab(title);
-    tabArray.push(newTab);
-    return newTab;
-}
-
-function createDefaultTabs() {
-    const allTab = createTab('All');
-    allTab.addTask({ title: 'Work on ToDo App', completed: false, important: true });
-
-    createTab('Today');
-    createTab('This Week');
-    createTab('Not Scheduled');
-    createTab('Important');
-    createTab('Completed');
-}
-
-createDefaultTabs();
-console.log(tabArray);
-
-/* Display tab content on click */ 
-
-const allBtn = document.querySelector('#allBtn');
-
-allBtn.addEventListener('click', () => {
-    const allTab = tabArray.find(tab => tab.title === 'All');
-    if (allTab) {
-        displayTabContent(allTab);
-    }
-})
 
 
 

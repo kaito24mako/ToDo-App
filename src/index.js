@@ -4,7 +4,7 @@ import './css/content.css';
 
 import { toggleSidebar, toggleTheme, checkViewportWidth } from './js/sidebar.js';
 import { displayContent } from './js/dom.js';
-import { tabArray, createDefaultTabs } from './js/tabs.js';
+import { tabArray, createDefaultTabs, addTabToSidebar } from './js/tabs.js';
 
 export function getUI() {
     return {
@@ -16,6 +16,7 @@ export function getUI() {
         logo: document.querySelector('#logo'),
         themeBtn: document.querySelector('#themeBtn'),
         tabButtons: document.querySelectorAll('.tab-container button:not(#settingsBtn)'),
+        missions: document.querySelector('#mission-container'),
         /* content */
         content: document.querySelector('#content-container'),
     }
@@ -28,9 +29,7 @@ checkViewportWidth();
 /* dom.js */
 /* tabs.js */
 createDefaultTabs();
-
-
-/* Display content on tab click */ 
+addTabToSidebar();
 
 function displayContentOnClick() {
     const { tabButtons, content } = getUI();

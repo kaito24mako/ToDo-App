@@ -1,17 +1,7 @@
-const ui = {
-    /* general */
-    root: document.documentElement,
-    /* sidebar */
-    sidebar: document.querySelector('#sidebar-container'),
-    sidebarBtn: document.querySelector('#sidebarBtn'),
-    logo: document.querySelector('#logo'),
-    themeBtn: document.querySelector('#themeBtn'),
-    /* content */
-    content: document.querySelector('#content-container'),
-}
+import { getUI } from "../index.js";
 
 export function toggleSidebar() {
-    const { sidebar, sidebarBtn, logo } = ui;
+    const { sidebar, sidebarBtn, logo } = getUI();
     sidebar.classList.add('open');
 
     sidebarBtn.addEventListener('click', () => {
@@ -28,7 +18,7 @@ export function toggleSidebar() {
 }
 
 export function toggleTheme() {
-    const { root, themeBtn } = ui;
+    const { root, themeBtn } = getUI();
 
     themeBtn.addEventListener('click', () => {
         const currentTheme = root.getAttribute('data-theme');
@@ -46,7 +36,7 @@ export function toggleTheme() {
 }
 
 export function checkViewportWidth() {
-    const { sidebar, sidebarBtn, logo, themeBtn, content } = ui;
+    const { sidebar, sidebarBtn, logo, themeBtn, content } = getUI();
 
     /* blur content on smaller viewports */
     if (window.innerWidth <= 665) {

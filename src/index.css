@@ -43,15 +43,7 @@ button {
     --font-primary: system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
 
     /* colors */
-    /* --black: hsl(0, 0%, 9%);
-    --black-light: hsl(0, 0%, 12%);
-
-    --grey: hsl(0, 0%, 17%);
-
-    --white-dark: hsl(0, 0%, 60%);
-    --white: hsl(0, 0%, 80%);
-
-    --blue-gradient: linear-gradient(135deg, #75E2EF, #1D768C); */
+    --blue-gradient: linear-gradient(135deg, #75E2EF, #1D768C); 
 
     /* font sizes */
     --vlarge: 1.5rem;

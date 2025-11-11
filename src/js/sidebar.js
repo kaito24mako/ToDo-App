@@ -43,7 +43,6 @@ export function checkViewportWidth() {
     }
 
     window.addEventListener('resize', checkViewportWidth);
-
     sidebarBtn.addEventListener('click', checkViewportWidth);
 }
 
@@ -54,7 +53,6 @@ export function toggleTheme() {
         const currentTheme = root.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         root.setAttribute('data-theme', newTheme);
-
         // save to localStorage
         localStorage.setItem('theme', newTheme);
     })

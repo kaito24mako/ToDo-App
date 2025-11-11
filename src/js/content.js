@@ -7,7 +7,7 @@ export function createTabContent() {
 
     const tabTitle = document.createElement('h2');
     tabTitle.id = 'tabTitle';
-    tabTitle.textContent = 'Title';  // PLACEHOLDER
+    tabTitle.textContent = 'All';  // PLACEHOLDER
 
     const counters = document.createElement('div');
     counters.id = 'counters';
@@ -43,3 +43,44 @@ export function createTabContent() {
 
     // ANOTHER LOOP FOR DISPLAYING TASKS 
 }
+
+let tabArray = [];
+
+class Tab {
+    constructor(title) {
+        this.title = title;
+        this.progress = 0;
+        this.completed = 0;
+        this.taskArr = [];
+        this.id = crypto.randomUUID();
+    }
+    addTask(task) {
+        this.taskArr.push(task);
+        this.updateCounts();
+    }
+    updateCounts() {
+        this.completed = this.taskArr.filter(task => task.completed).length;
+        this.progress = this.taskArr.length - this.completed;
+    }
+}
+
+function createTab(title) {
+    let newTab = new Tab(title);
+    tabArray.push(newTab);
+    return newTab;
+}
+
+function createDefaultTabs() {
+    const allTab = createTab('All');
+    allTab.addTask({ title: 'Work on ToDo App', completed: false, important: true });
+
+    const todayTab = createTab('Today');
+    const weekTab = createTab('This Week');
+    const notScheduledTab = createTab('Not Scheduled');
+    const importantTab = createTab('Important');
+    const completedTab = createTab('Completed');
+}
+
+createDefaultTabs();
+
+console.log(tabArray);

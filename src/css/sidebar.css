@@ -108,7 +108,7 @@
     position: relative;
 }
 
-#mission-wrapper button:hover {
+#mission-wrapper:hover button {
     background-color: var(--grey);
 }
 

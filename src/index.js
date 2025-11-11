@@ -3,8 +3,8 @@ import './css/sidebar.css';
 import './css/content.css';
 
 import { toggleSidebar, toggleTheme, checkViewportWidth } from './js/sidebar.js';
-import { displayContent } from './js/dom.js';
-import { tabArray, createDefaultTabs, addTabToSidebar } from './js/tabs.js';
+import { displayContent, addMissionsToSidebar } from './js/dom.js';
+import { tabArray, createDefaultTabs } from './js/tabs.js';
 
 export function getUI() {
     return {
@@ -27,9 +27,9 @@ toggleSidebar();
 toggleTheme();
 checkViewportWidth();
 /* dom.js */
+addMissionsToSidebar();
 /* tabs.js */
 createDefaultTabs();
-addTabToSidebar();
 
 function displayContentOnClick() {
     const { tabButtons, content } = getUI();

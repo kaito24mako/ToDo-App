@@ -3,7 +3,7 @@ import './css/sidebar.css';
 import './css/content.css';
 
 import { toggleSidebar, toggleTheme, checkViewportWidth } from './js/sidebar.js';
-import { createTabContent } from './js/content.js';
+import { displayTabContent } from './js/content.js';
 
 export function getUI() {
     return {
@@ -14,6 +14,7 @@ export function getUI() {
         sidebarBtn: document.querySelector('#sidebarBtn'),
         logo: document.querySelector('#logo'),
         themeBtn: document.querySelector('#themeBtn'),
+        
         /* content */
         content: document.querySelector('#content-container'),
     }
@@ -25,4 +26,3 @@ toggleTheme();
 checkViewportWidth();
 
 /* content.js */
-createTabContent();

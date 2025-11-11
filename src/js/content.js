@@ -1,13 +1,13 @@
 import { getUI } from "../index.js";
 
-export function createTabContent() {
+export function displayTabContent(tab) {
     const { content } = getUI();
+    content.innerHTML = "";
 
-    // LOOP THROUGH ARRAY OF TAB OBJECTS, CREATED BY CLASS
-
+    // List of tabs 
     const tabTitle = document.createElement('h2');
     tabTitle.id = 'tabTitle';
-    tabTitle.textContent = 'All';  // PLACEHOLDER
+    tabTitle.textContent = tab.title;  // PLACEHOLDER
 
     const counters = document.createElement('div');
     counters.id = 'counters';
@@ -36,13 +36,15 @@ export function createTabContent() {
     completedStatus.id = 'status';
     completedStatus.textContent = 'Completed';  
 
+    // Structure 
     content.append(tabTitle, counters);
     counters.append(progress, completed);
     progress.append(progressNumber, progressStatus);
     completed.append(completedNumber, completedStatus);
 
-    // ANOTHER LOOP FOR DISPLAYING TASKS 
+    // List of tasks 
 }
+
 
 let tabArray = [];
 
@@ -74,13 +76,26 @@ function createDefaultTabs() {
     const allTab = createTab('All');
     allTab.addTask({ title: 'Work on ToDo App', completed: false, important: true });
 
-    const todayTab = createTab('Today');
-    const weekTab = createTab('This Week');
-    const notScheduledTab = createTab('Not Scheduled');
-    const importantTab = createTab('Important');
-    const completedTab = createTab('Completed');
+    createTab('Today');
+    createTab('This Week');
+    createTab('Not Scheduled');
+    createTab('Important');
+    createTab('Completed');
 }
 
 createDefaultTabs();
-
 console.log(tabArray);
+
+/* Display tab content on click */ 
+
+const allBtn = document.querySelector('#allBtn');
+
+allBtn.addEventListener('click', () => {
+    const allTab = tabArray.find(tab => tab.title === 'All');
+    if (allTab) {
+        displayTabContent(allTab);
+    }
+})
+
+
+

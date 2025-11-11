@@ -33,11 +33,22 @@ createDefaultTabs();
 /* click.js */
 
 
+function displayAllTabOnLoad() {
+    const { content } = getUI();
+    const allTab = tabArray.find(tab => tab.title === 'All');
+
+    window.addEventListener('load', () => {
+        if (allTab) {
+            content.innerHTML = "";
+            displayTasksContent(allTab);
+        }
+    })
+}
+
 function displayTabContentOnClick() {
     const { tabButtons, content } = getUI();
-    // Declare due to missionButtons being created dynamically
     const missionButtons = document.querySelectorAll('#mission-wrapper button');
-
+    
     tabButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const dataTitle = btn.dataset.title;
@@ -62,29 +73,25 @@ function displayTabContentOnClick() {
         })
     })
 }
-displayTabContentOnClick();
 
 function createNewMission() {
     const addMissionBtn = document.querySelector('#addMissionBtn');
 
     addMissionBtn.addEventListener('click', () => {
-        // Prompt for new mission name
-        const newMissionName = prompt('Enter new mission name:');
-        if (!newMissionName) {
+        const newMissionTitle = prompt('Enter new mission name:');
+        if (!newMissionTitle) {
             return;
         }
-        // Prevent duplicate names
-        if (tabArray.some(tab => tab.title === newMissionName)) {
+        if (tabArray.some(tab => tab.title === newMissionTitle)) {
             alert('A mission with that name already exists.');
             return;
         }
-        // Create new mission tab
-        const newMission = createTab(newMissionName);
-        // Add it to sidebar 
+        const newMission = createTab(newMissionTitle);
         addMissionsToSidebar(newMission);
-        // Re-call so new mission shows
         displayTabContentOnClick();
     })
 }
-createNewMission();
 
+displayAllTabOnLoad();
+displayTabContentOnClick();
+createNewMission();

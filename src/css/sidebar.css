@@ -30,8 +30,6 @@
 }
 
 #logo {
-    display: flex;
-
     position: fixed;
     left: 17.5rem;
 
@@ -39,6 +37,10 @@
 
     color: var(--white-dark);
     font-size: var(--large);
+}
+
+#themeBtn {
+    position: fixed;
 }
 
 #task-container,

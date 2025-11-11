@@ -43,7 +43,7 @@ button {
     --font-primary: system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
 
     /* colors */
-    --black: hsl(0, 0%, 9%);
+    /* --black: hsl(0, 0%, 9%);
     --black-light: hsl(0, 0%, 12%);
 
     --grey: hsl(0, 0%, 17%);
@@ -51,7 +51,7 @@ button {
     --white-dark: hsl(0, 0%, 60%);
     --white: hsl(0, 0%, 80%);
 
-    --blue-gradient: linear-gradient(135deg, #75E2EF, #1D768C);
+    --blue-gradient: linear-gradient(135deg, #75E2EF, #1D768C); */
 
     /* font sizes */
     --vlarge: 1.5rem;
@@ -73,6 +73,26 @@ button {
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+:root[data-theme="dark"] {
+    --black: hsl(0, 0%, 9%);
+    --black-light: hsl(0, 0%, 12%);
+
+    --grey: hsl(0, 0%, 17%);
+
+    --white-dark: hsl(0, 0%, 60%);
+    --white: hsl(0, 0%, 80%);
+}
+
+:root[data-theme="light"] {
+    --black: hsl(0, 0%, 80%);
+    --black-light: hsl(0, 0%, 75%);
+
+    --grey: hsl(0, 0%, 70%);
+
+    --white-dark: hsl(0, 0%, 12%);
+    --white: hsl(0, 0%, 9%);
 }
 
 /* ==== General ==== */

@@ -6,7 +6,7 @@ export function displayContent(tab) {
     const { content } = getUI();
     content.innerHTML = "";
 
-    // list of tabs 
+    // title and counters
     const tabTitle = document.createElement('h2');
     tabTitle.id = 'tabTitle';
     tabTitle.textContent = tab.title;  // PLACEHOLDER
@@ -36,16 +36,17 @@ export function displayContent(tab) {
 
     const completedStatus = document.createElement('p');
     completedStatus.id = 'status';
-    completedStatus.textContent = 'Completed';  
+    completedStatus.textContent = 'Completed'; 
+    
+    const taskContainer = document.createElement('div');
+    taskContainer.id = 'tasks';
 
-    content.append(tabTitle, counters);
+    content.append(tabTitle, counters, taskContainer);
     counters.append(progress, completed);
     progress.append(progressNumber, progressStatus);
     completed.append(completedNumber, completedStatus);
 
-    // list of tasks 
-    const taskContainer = document.createElement('div');
-    taskContainer.id = 'tasks';
+    // tasks 
     tab.taskArray.forEach(t => {
         const task = document.createElement('div');
         task.classList.add('task');
@@ -74,9 +75,22 @@ export function displayContent(tab) {
         task.append(buttonAndTitle, duedate);
         buttonAndTitle.append(circle, title, important);
         circle.appendChild(circleImage);
+
+        
     })
 
-    content.appendChild(taskContainer);
+    // "add task" button 
+        const addTaskBtn = document.createElement('button');
+        addTaskBtn.id = 'addTaskBtn';
+
+        const plus = document.createElement('p');
+        plus.textContent = '+';
+
+        const text = document.createElement('p');
+        text.textContent = 'Add Task';
+
+        content.appendChild(addTaskBtn);
+        addTaskBtn.append(plus, text);
 }
 
 

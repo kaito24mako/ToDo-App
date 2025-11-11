@@ -27,9 +27,7 @@ export function createTab(title) {
 }
 
 export function createDefaultTabs() {
-    const allTab = createTab('All');
-    allTab.addTask({ title: 'Work on ToDo App', completed: false, important: true });
-
+    createTab('All').addTask({ title: 'Work on ToDo App', completed: false, important: true }); 
     createTab('Today');
     createTab('This Week');
     createTab('Not Scheduled');

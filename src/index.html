@@ -24,7 +24,7 @@
             <h3>Tasks</h3>
             <ul class="tab-container" id="task-tab-container">
                 <li>
-                    <button id="allBtn">
+                    <button id="allBtn" data-title="All">
                         <span class="icon-and-title">
                             <img src="./images/inbox.png" alt="An image of an inbox">
                             All
@@ -33,7 +33,7 @@
                     </button>
                 </li>
                 <li>
-                    <button id="todayBtn">
+                    <button id="todayBtn" data-title="Today">
                         <span class="icon-and-title">
                             <img src="./images/today.png" alt="An image of the Sun">
                             Today
@@ -42,7 +42,7 @@
                     </button>
                 </li>
                 <li>
-                    <button id="weekBtn">
+                    <button id="weekBtn" data-title="This Week">
                         <span class="icon-and-title">
                             <img src="./images/week.png" alt="An image of a calendar">
                             This Week
@@ -51,16 +51,16 @@
                     </button>
                 </li>
                 <li>
-                    <button id="unscheduledBtn">
+                    <button id="unscheduledBtn" data-title="Not Scheduled">
                         <span class="icon-and-title">
                             <img src="./images/unscheduled.png" alt="An image of an incomplete calendar">
-                            Unscheduled
+                            Not Scheduled
                         </span>
                         <p class="counter">3</p>
                     </button>
                 </li>
                 <li>
-                    <button id="importantBtn">
+                    <button id="importantBtn" data-title="Important">
                         <span class="icon-and-title">
                             <img src="./images/important.png" alt="Two exclamation marks">
                             Important
@@ -69,7 +69,7 @@
                     </button>
                 </li>
                 <li>
-                    <button id="completedBtn">
+                    <button id="completedBtn" data-title="Completed">
                         <span class="icon-and-title">
                             <img src="./images/complete.png" alt="An image of a tick">
                             Completed
@@ -84,10 +84,10 @@
             <h3>My Missions</h3>
             <ul class="tab-container" id="mission-tab-container">
                 <li id="mission-wrapper">
-                    <button id="defaultBtn">
+                    <button id="defaultBtn" data-title="To Buy">
                         <span class="icon-and-title">
                             <img src="./images/mission.png" alt="An image of a folder with a target">
-                            To buy
+                            To Buy
                         </span>
                     </button>
                     <button id="settingsBtn">

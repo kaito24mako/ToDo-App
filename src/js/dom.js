@@ -1,6 +1,8 @@
 import { getUI } from "../index.js";
+import circleImg from '../images/circle.png';
+import importantImg from '../images/important.png';
 
-export function displayTabContent(tab) {
+export function displayContent(tab) {
     const { content } = getUI();
     content.innerHTML = "";
 
@@ -52,16 +54,16 @@ export function displayTabContent(tab) {
         buttonAndTitle.id = 'button-and-title';
 
         const circle = document.createElement('button');
-        const circleImg = document.createElement('img');
-        circleImg.src = '../images/circle.png';
-        circleImg.alt = 'A small circle';
+        const circleImage = document.createElement('img');
+        circleImage.src = circleImg;
+        circleImage.alt = 'A small circle';
 
         const title = document.createElement('p');
         title.id = 'taskTitle';
         title.textContent = 'Task 1'; // PLACEHOLDER 
 
         const important = document.createElement('img');
-        important.src = '../images/important.png';
+        important.src = importantImg;
         important.alt = 'Two exclamation marks';
 
         const duedate = document.createElement('span');
@@ -71,6 +73,7 @@ export function displayTabContent(tab) {
         taskContainer.appendChild(task);
         task.append(buttonAndTitle, duedate);
         buttonAndTitle.append(circle, title, important);
+        circle.appendChild(circleImage);
     })
 
     content.appendChild(taskContainer);

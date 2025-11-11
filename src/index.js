@@ -3,7 +3,7 @@ import './css/sidebar.css';
 import './css/content.css';
 
 import { toggleSidebar, toggleTheme, checkViewportWidth } from './js/sidebar.js';
-import { displayTabContent } from './js/dom.js';
+import { displayContent } from './js/dom.js';
 import { tabArray, createDefaultTabs } from './js/tabs.js';
 
 export function getUI() {
@@ -15,7 +15,7 @@ export function getUI() {
         sidebarBtn: document.querySelector('#sidebarBtn'),
         logo: document.querySelector('#logo'),
         themeBtn: document.querySelector('#themeBtn'),
-        allBtn: document.querySelector('#allBtn'),
+        tabButtons: document.querySelectorAll('.tab-container button:not(#settingsBtn)'),
         /* content */
         content: document.querySelector('#content-container'),
     }
@@ -30,11 +30,21 @@ checkViewportWidth();
 createDefaultTabs();
 
 
-/* Display tab content on click */ 
+/* Display content on tab click */ 
 
-allBtn.addEventListener('click', () => {
-    const allTab = tabArray.find(tab => tab.title === 'All');
-    if (allTab) {
-        displayTabContent(allTab);
-    }
-})
+function displayContentOnClick() {
+    const { tabButtons, content } = getUI();
+
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const dataTitle = btn.dataset.title;
+            const selectedTab = tabArray.find(tab => tab.title === dataTitle);
+
+            if (selectedTab) {
+                content.innerHTML = "";
+                displayContent(selectedTab);
+            }
+        })
+    })
+}
+displayContentOnClick();

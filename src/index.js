@@ -3,9 +3,8 @@ import './css/sidebar.css';
 import './css/content.css';
 
 import { toggleSidebar, toggleTheme, checkViewportWidth } from './js/sidebar.js';
-import { addMissionsToSidebar } from './js/dom.js';
-import { createDefaultTabs } from './js/tabs.js';
-import { displayTasksContentOnClick } from './js/click.js';
+import { displayTasksContent, addMissionsToSidebar, addMissionToSidebarList } from './js/dom.js';
+import { tabArray, createTab, createDefaultTabs } from './js/tabs.js';
 
 export function getUI() {
     return {
@@ -32,4 +31,40 @@ addMissionsToSidebar({ title: 'to buy' });
 /* tabs.js */
 createDefaultTabs();
 /* click.js */
-displayTasksContentOnClick();
+
+
+function displayTaskContentOnClick() {
+    const { tabButtons, content } = getUI();
+
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const dataTitle = btn.dataset.title;
+            const selectedTab = tabArray.find(tab => tab.title === dataTitle);
+
+            if (selectedTab) {
+                content.innerHTML = "";
+                displayTasksContent(selectedTab);
+            }
+        })
+    })
+}
+displayTaskContentOnClick();
+
+addMissionBtn.addEventListener('click', () => {
+    const newMissionName = prompt('Enter new mission name:');
+    if (!newMissionName) {
+        return;
+    }
+
+    // Prevent duplicate names
+    if (tabArray.some(tab => tab.title === newMissionName)) {
+        alert('A mission with that name already exists.');
+        return;
+    }
+
+    // Create new mission tab
+    const newMission = createTab(newMissionName);
+
+    // Add it to sidebar visually
+    addMissionToSidebarList(newMission);
+});

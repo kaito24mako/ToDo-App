@@ -120,7 +120,7 @@ export function addMissionsToSidebar(tab) {
     missionImg.alt = "An image of a folder with a target on it";
 
     const missionTitle = document.createElement('p');
-    missionTitle.textContent = 'to buy';  // how to set data-title?
+    missionTitle.textContent = tab.title; 
 
     const settingsBtn = document.createElement('button');
     settingsBtn.id = 'settingsBtn';
@@ -155,6 +155,44 @@ export function addMissionsToSidebar(tab) {
     wrapper2.appendChild(addMissionBtn);
     addMissionBtn.appendChild(iconTitle2);
     iconTitle2.append(addMissionImg, addMissionTitle);
+}
+
+export function addMissionToSidebarList(tab) {
+    const { missions } = getUI();
+    const container = missions.querySelector('.tab-container'); 
+
+    // Create the new mission button
+    const wrapper = document.createElement('li');
+    wrapper.classList.add('mission-wrapper');
+
+    const button = document.createElement('button');
+    button.dataset.title = tab.title;
+
+    const iconTitle = document.createElement('span');
+    iconTitle.classList.add('icon-and-title');
+
+    const missionImg = document.createElement('img');
+    missionImg.src = folderImg;
+    missionImg.alt = 'An image of a folder with a target on it';
+
+    const missionTitle = document.createElement('p');
+    missionTitle.textContent = tab.title;
+
+    // Build the structure
+    iconTitle.append(missionImg, missionTitle);
+    button.appendChild(iconTitle);
+    wrapper.appendChild(button);
+
+    // Insert before the “Add Mission” button
+    const addMissionWrapper = missions.querySelector('#addMissionBtn').parentElement;
+    container.insertBefore(wrapper, addMissionWrapper);
+
+    // Optional: Add click listener for displaying mission content
+    const { content } = getUI();
+    button.addEventListener('click', () => {
+        content.innerHTML = '';
+        displayTasksContent(tab);
+    });
 }
 
 

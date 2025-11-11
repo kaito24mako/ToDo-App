@@ -25,7 +25,6 @@ export function createTab(title) {
 }
 
 export function createDefaultTabs() {
-
     // default tabs 
     createTab('All').addTask({ title: 'Work on ToDo App', completed: false, important: true }); 
     createTab('Today');
@@ -38,4 +37,3 @@ export function createDefaultTabs() {
     createTab('to buy');
 }
 
-// console.log(tabArray);

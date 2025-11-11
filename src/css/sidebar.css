@@ -103,16 +103,16 @@
     color: var(--white-dark);
 }
 
-.tab-container #mission-wrapper {
+#mission-wrapper {
     display: flex;
     position: relative;
 }
 
-#mission-wrapper:hover button {
+#mission-wrapper button:hover {
     background-color: var(--grey);
 }
 
-.tab-container #settingsBtn {
+#mission-wrapper #settingsBtn {
     position: absolute;
     right: 0.35rem;
     top: 0.65rem;

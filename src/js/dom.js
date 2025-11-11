@@ -5,14 +5,14 @@ import folderImg from "../images/mission.png";
 import optionsImg from "../images/edit.png";
 import plusImg from "../images/plus.png";
 
-export function displayContent(tab) {
+export function displayTasksContent(tab) {
     const { content } = getUI();
     content.innerHTML = "";
 
     // title and counters
     const tabTitle = document.createElement('h2');
     tabTitle.id = 'tabTitle';
-    tabTitle.textContent = tab.title;  // PLACEHOLDER
+    tabTitle.textContent = tab.title;  
 
     const counters = document.createElement('div');
     counters.id = 'counters';
@@ -78,8 +78,6 @@ export function displayContent(tab) {
         task.append(buttonAndTitle, duedate);
         buttonAndTitle.append(circle, title, important);
         circle.appendChild(circleImage);
-
-        
     })
 
     // "add task" button 
@@ -96,7 +94,7 @@ export function displayContent(tab) {
         addTaskBtn.append(plus, text);
 }
 
-export function addMissionsToSidebar() {
+export function addMissionsToSidebar(tab) {
     const { missions } = getUI();
 
     // missions
@@ -111,6 +109,7 @@ export function addMissionsToSidebar() {
     wrapper.id = 'mission-wrapper';
 
     const button = document.createElement('button');
+    button.dataset.title = tab.title;
 
     const iconTitle = document.createElement('span');
     iconTitle.classList.add('icon-and-title');

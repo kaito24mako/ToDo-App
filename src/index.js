@@ -3,8 +3,9 @@ import './css/sidebar.css';
 import './css/content.css';
 
 import { toggleSidebar, toggleTheme, checkViewportWidth } from './js/sidebar.js';
-import { displayContent, addMissionsToSidebar } from './js/dom.js';
-import { tabArray, createDefaultTabs } from './js/tabs.js';
+import { addMissionsToSidebar } from './js/dom.js';
+import { createDefaultTabs } from './js/tabs.js';
+import { displayTasksContentOnClick } from './js/click.js';
 
 export function getUI() {
     return {
@@ -27,23 +28,8 @@ toggleSidebar();
 toggleTheme();
 checkViewportWidth();
 /* dom.js */
-addMissionsToSidebar();
+addMissionsToSidebar({ title: 'to buy' });
 /* tabs.js */
 createDefaultTabs();
-
-function displayContentOnClick() {
-    const { tabButtons, content } = getUI();
-
-    tabButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const dataTitle = btn.dataset.title;
-            const selectedTab = tabArray.find(tab => tab.title === dataTitle);
-
-            if (selectedTab) {
-                content.innerHTML = "";
-                displayContent(selectedTab);
-            }
-        })
-    })
-}
-displayContentOnClick();
+/* click.js */
+displayTasksContentOnClick();

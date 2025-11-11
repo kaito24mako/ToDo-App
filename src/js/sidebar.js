@@ -2,8 +2,6 @@ const ui = {
     sidebar: document.querySelector('#sidebar-container'),
     sidebarBtn: document.querySelector('#sidebarBtn'),
     logo: document.querySelector('#logo'),
-    missions: document.querySelector('#mission-container button'),
-    settings: document.querySelector('#settingsBtn'),
     content: document.querySelector('#content-container'),
 }
 

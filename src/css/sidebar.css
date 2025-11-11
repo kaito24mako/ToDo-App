@@ -106,9 +106,13 @@
     position: relative;
 }
 
+#mission-wrapper:hover #defaultBtn {
+    background-color: var(--grey);
+}
+
 .tab-container #settingsBtn {
     position: absolute;
-    right: 0.3rem;
+    right: 0.35rem;
     top: 0.65rem;
 }
 

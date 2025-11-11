@@ -1,8 +1,14 @@
+const ui = {
+    sidebar: document.querySelector('#sidebar-container'),
+    sidebarBtn: document.querySelector('#sidebarBtn'),
+    logo: document.querySelector('#logo'),
+    missions: document.querySelector('#mission-container button'),
+    settings: document.querySelector('#settingsBtn'),
+    content: document.querySelector('#content-container'),
+}
+
 export function toggleSidebar() {
-    const sidebar = document.querySelector('#sidebar-container');
-    const sidebarBtn = document.querySelector('#sidebarBtn');
-    const logo = document.querySelector('#logo');
-    
+    const { sidebar, sidebarBtn, logo } = ui;
     sidebar.classList.add('open');
 
     sidebarBtn.addEventListener('click', () => {
@@ -19,10 +25,7 @@ export function toggleSidebar() {
 }
 
 export function checkViewportWidth() {
-    const sidebar = document.querySelector('#sidebar-container');
-    const sidebarBtn = document.querySelector('#sidebarBtn');
-    const logo = document.querySelector('#logo');
-    const content = document.querySelector('#content-container');
+    const { sidebar, sidebarBtn, logo, content } = ui;
 
     /* blur content on smaller viewports */
     if (window.innerWidth <= 665) {

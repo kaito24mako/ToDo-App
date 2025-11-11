@@ -71,7 +71,7 @@
     gap: var(--spacing-small);
 }
 
-.tab-container button {
+.tab-container button:not(#settingsBtn) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,7 +86,7 @@
     border-radius: 10px;
 }
 
-.tab-container button:hover {
+.tab-container button:hover:not(#settingsBtn) {
     background-color: var(--grey);
 }
 
@@ -99,6 +99,17 @@
 
 .tab-container .counter {
     color: var(--white-dark);
+}
+
+.tab-container #mission-wrapper {
+    display: flex;
+    position: relative;
+}
+
+.tab-container #settingsBtn {
+    position: absolute;
+    right: 0.3rem;
+    top: 0.65rem;
 }
 
 @media (max-width: 665px) {

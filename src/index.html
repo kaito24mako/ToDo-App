@@ -95,27 +95,13 @@
                     </button>
                 </li> -->
                 <li>
-                    <button id="addMissionBtn">
+                    <button id="addMissionBtn" type="button">
                         <span class="icon-and-title">
                             <img src="./images/plus.png" alt="An image of a plus sign">
                             Add Mission
                         </span>
                     </button>
                     
-                </li>
-                <li>
-                    <dialog id="addMission-dialog" open>
-                        <form method="post" id="addMission-form" class="mission-form">
-                            <div>
-                                <label for="title"></label>
-                                <input type="text" id="title" name="title" placeholder="Mission Name" required>
-                            </div>
-                            <div class="buttons">
-                                <button id="cancel">Cancel</button>
-                                <button type="submit" id="save">Save Changes</button>
-                            </div>
-                        </form>
-                    </dialog>
                 </li>
             </ul>
         </div>
@@ -154,7 +140,18 @@
         </button> -->
     </main>
 
-    
+<dialog id="addMission-dialog">
+    <form method="post" id="addMission-form" class="mission-form">
+        <div>
+            <label for="title"></label>
+            <input type="text" id="title" name="title" placeholder="Mission Name" required>
+        </div>
+        <div class="buttons">
+            <button id="cancel">Cancel</button>
+            <button type="submit" id="save">Save Changes</button>
+        </div>
+    </form>
+</dialog>
         
 </body>
 </html>

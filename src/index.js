@@ -1,11 +1,12 @@
 import './index.css';
 import './css/sidebar.css';
 import './css/content.css';
-import './css/form.css';
+import './css/forms.css';
 
 import { toggleSidebar, toggleTheme, checkViewportWidth } from './js/sidebar.js';
 import { displayTasksContent, addMissionsToSidebar } from './js/dom.js';
 import { tabArray, createTab, createDefaultTabs } from './js/tabs.js';
+import { displayAddMission } from './js/forms.js';
 
 export function getUI() {
     return {
@@ -28,10 +29,10 @@ toggleSidebar();
 toggleTheme();
 checkViewportWidth();
 /* dom.js */
-addMissionsToSidebar({ title: 'To buy' });
 /* tabs.js */
 createDefaultTabs();
-/* click.js */
+/* forms.js */
+displayAddMission();
 
 
 function displayAllTabOnLoad() {
@@ -44,9 +45,10 @@ function displayAllTabOnLoad() {
             displayTasksContent(allTab);
         }
     })
+    addMissionsToSidebar({title: 'To buy' });
 }
 
-function displayTabContentOnClick() {
+export function displayTabContentOnClick() {
     const { tabButtons, content } = getUI();
     const missionButtons = document.querySelectorAll('#mission-wrapper button');
     
@@ -75,24 +77,5 @@ function displayTabContentOnClick() {
     })
 }
 
-function createNewMission() {
-    const addMissionBtn = document.querySelector('#addMissionBtn');
-
-    addMissionBtn.addEventListener('click', () => {
-        const newMissionTitle = prompt('Enter new mission name:');
-        if (!newMissionTitle) {
-            return;
-        }
-        if (tabArray.some(tab => tab.title === newMissionTitle)) {
-            alert('A mission with that name already exists.');
-            return;
-        }
-        const newMission = createTab(newMissionTitle);
-        addMissionsToSidebar(newMission);
-        displayTabContentOnClick();
-    })
-}
-
 displayAllTabOnLoad();
 displayTabContentOnClick();
-createNewMission();

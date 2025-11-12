@@ -101,6 +101,21 @@
                             Add Mission
                         </span>
                     </button>
+                    
+                </li>
+                <li>
+                    <dialog id="addMission-dialog" open>
+                        <form method="post" id="addMission-form" class="mission-form">
+                            <div>
+                                <label for="title"></label>
+                                <input type="text" id="title" name="title" placeholder="Mission Name" required>
+                            </div>
+                            <div class="buttons">
+                                <button id="cancel">Cancel</button>
+                                <button type="submit" id="save">Save Changes</button>
+                            </div>
+                        </form>
+                    </dialog>
                 </li>
             </ul>
         </div>
@@ -138,5 +153,8 @@
             <p>Add Task</p>
         </button> -->
     </main>
+
+    
+        
 </body>
 </html>

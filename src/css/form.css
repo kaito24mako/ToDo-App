@@ -1,0 +1,75 @@
+dialog {
+    border: none;
+    background: transparent;
+    overflow: visible;
+    z-index: 10;
+}
+dialog[open] {
+    position: absolute;
+    
+}
+dialog::backdrop {
+    background-color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: var(--width-sidebar);
+
+    gap: var(--spacing-medium);
+    padding: var(--spacing-medium) 0;
+
+    background-color: var(--black);
+    border-radius: 10px;
+
+    box-shadow: 4px 4px 20px var(--black);
+}
+
+form h2 {
+    color: var(--white-dark);
+}
+
+form input {
+    border-bottom: 2px solid var(--grey);
+    outline: none;
+    
+    color: var(--white-dark);
+}
+
+form .buttons {
+    display: flex;
+
+    gap: var(--spacing-medium);
+}
+
+form .buttons button {
+    padding: var(--spacing-small);
+
+    color: var(--white);
+    font-size: var(--medium);
+
+    border-radius: 10px;
+}
+
+form button#cancel {
+    background-color: rgb(99, 9, 9);
+}
+
+form button#save {
+    background-color: rgb(11, 100, 11);
+}
+
+/* Add Mission form */
+
+#addMission-form input {
+    font-size: var(--medium);
+    width: 10.5rem;
+}
+#addMission-form .buttons button {
+   width: fit-content;
+    
+}
+

@@ -1,6 +1,7 @@
 import './index.css';
 import './css/sidebar.css';
 import './css/content.css';
+import './css/form.css';
 
 import { toggleSidebar, toggleTheme, checkViewportWidth } from './js/sidebar.js';
 import { displayTasksContent, addMissionsToSidebar } from './js/dom.js';

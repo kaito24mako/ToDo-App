@@ -57,6 +57,7 @@
 
 #mission-container {
     margin-top: 2.5rem;
+    position: relative;
 }
 
 #task-container > h3,
@@ -80,7 +81,7 @@
 
     width: var(--width-sidebar);
 
-    padding: var(--spacing-small) var(--spacing-small);
+    padding: var(--spacing-small);
 
     font-size: var(--medium);
     color: var(--white);

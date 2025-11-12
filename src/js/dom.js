@@ -22,7 +22,10 @@ export function displayTasksContent(tab) {
 
     const progressNumber = document.createElement('p');
     progressNumber.id = 'number';
-    progressNumber.textContent = tab.progress;  
+    progressNumber.textContent = tab.progress; 
+    
+    // const progressCounter = document.querySelector('#task-tab-container .counter')
+    // progressCounter.textContent = tab.progress;
 
     const progressStatus = document.createElement('p');
     progressStatus.id = 'status';

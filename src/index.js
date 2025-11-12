@@ -6,7 +6,7 @@ import './css/forms.css';
 import { toggleSidebar, toggleTheme, checkViewportWidth } from './js/sidebar.js';
 import { displayTasksContent, addMissionsToSidebar } from './js/dom.js';
 import { tabArray, createTab, createDefaultTabs } from './js/tabs.js';
-import { displayAddMission } from './js/forms.js';
+import { displayAddMission, editMission } from './js/forms.js';
 
 export function getUI() {
     return {
@@ -32,7 +32,7 @@ checkViewportWidth();
 /* tabs.js */
 createDefaultTabs();
 /* forms.js */
-displayAddMission();
+
 
 
 function displayAllTabOnLoad() {
@@ -79,3 +79,5 @@ export function displayTabContentOnClick() {
 
 displayAllTabOnLoad();
 displayTabContentOnClick();
+displayAddMission();
+editMission();

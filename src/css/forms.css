@@ -28,11 +28,25 @@ form h2 {
     color: var(--white-dark);
 }
 
+form label {
+    color: var(--white-dark);
+    font-size: var(--medium);
+    font-weight: bold;
+}
+
 form input {
     border-bottom: 2px solid var(--grey);
     outline: none;
     
     color: var(--white-dark);
+}
+
+form #label-and-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: var(--spacing-small);
 }
 
 form .buttons {
@@ -58,19 +72,25 @@ form button#save {
     background-color: rgb(11, 100, 11);
 }
 
-/* "Add Mission" form */
+/* mission forms */
 
-#addMission-form input {
+#addMission-form input,
+#editMission-form input {
     font-size: var(--medium);
     width: 10.5rem;
 }
-#addMission-form .buttons button {
+#addMission-form .buttons button,
+#editMission-form .buttons button {
    width: fit-content;
     
 }
-#addMission-dialog[open] {
+#addMission-dialog[open],
+#editMission-dialog[open] {
     position: fixed;
     top: 580px;
     left: 25px;
 }
+
+
+
 

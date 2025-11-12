@@ -3,6 +3,8 @@ import circleImg from '../images/circle.png';
 import importantImg from '../images/important.png';
 import folderImg from "../images/mission.png";
 import optionsImg from "../images/edit.png";
+import { editMission } from "./forms.js";
+
 
 export function displayTasksContent(tab) {
     const { content } = getUI();
@@ -133,6 +135,8 @@ export function addMissionsToSidebar(tab) {
     // append missions before "Add Mission" button
     const addMissionWrapper = missions.querySelector('#addMissionBtn').parentElement;
     container.insertBefore(wrapper, addMissionWrapper);
+
+    editMission();
 }
 
 
